@@ -2,7 +2,7 @@ name: Build IPA
 on: [push, workflow_dispatch]
 jobs:
   build:
-   runs-on: macos-15
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
       - run: unzip -o thabat-ios.zip && cd thabat-ios && brew install xcodegen && xcodegen generate
